@@ -23,11 +23,11 @@ app.post("/en", function (req, res) {
 });
 
 app.post("/ja", function (req, res) {
-  i18n.setLocale("en");
+  i18n.setLocale("ja");
   res.send(i18n.__("Hello") + " : Ja");
 });
 app.post("/ko", function (req, res) {
-  i18n.setLocale("en");
+  i18n.setLocale("ko");
   res.send(i18n.__("Hello") + " : Ko");
 });
 
