@@ -11,8 +11,6 @@ i18n.configure({
   directory: path.join(__dirname, "/locales"),
 });
 
-var hbs = require("hbs");
-const { LOADIPHLPAPI } = require("dns");
 app.set("view engine", "hbs");
 
 app.get("/", function (req, res) {
@@ -21,15 +19,15 @@ app.get("/", function (req, res) {
 
 app.post("/en", function (req, res) {
   i18n.setLocale("en");
-  res.send(i18n.__("Hello") + " : EN");
+  res.send(i18n.__("Hello") + ` : EN`);
 });
 
 app.post("/ja", function (req, res) {
-  i18n.setLocale("ja");
+  i18n.setLocale("en");
   res.send(i18n.__("Hello") + " : Ja");
 });
 app.post("/ko", function (req, res) {
-  i18n.setLocale("ko");
+  i18n.setLocale("en");
   res.send(i18n.__("Hello") + " : Ko");
 });
 
