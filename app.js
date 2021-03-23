@@ -1,16 +1,15 @@
-const express = require('express')
-const app = express()
+const express = require("express");
+const app = express();
 
 const port = 4000;
 
-var hbs = require('hbs');
-hbs.registerPartials(__dirname + '/views/partials');
+var hbs = require("hbs");
+app.set("view engine", "hbs");
 
+app.get("/", function (req, res) {
+  res.render("\index");
+});
 
-app.get('/', function (req, res) {
-  res.sendFile(__dirname + '\\index.html')
-})
- 
-app.listen(port , function (){
-    console.log(`App is listen on ${port}`);
-})
+app.listen(port, function () {
+  console.log(`App is listen on ${port}`);
+});
