@@ -17,18 +17,32 @@ app.get("/", function (req, res) {
   res.render("index");
 });
 
+app.post("/goBack", function (req, res) {
+  res.redirect("/");
+});
+
 app.post("/en", function (req, res) {
   i18n.setLocale("en");
-  res.send(i18n.__("Hello") + ` : EN`);
+  res.render("result", {
+    text: i18n.__("Hello"),
+    lang: "EN",
+  });
 });
 
 app.post("/ja", function (req, res) {
   i18n.setLocale("ja");
-  res.send(i18n.__("Hello") + " : Ja");
+  res.render("result", {
+    text: i18n.__("Hello"),
+    lang: "JA",
+  });
 });
+
 app.post("/ko", function (req, res) {
   i18n.setLocale("ko");
-  res.send(i18n.__("Hello") + " : Ko");
+  res.render("result", {
+    text: i18n.__("Hello"),
+    lang: "Ko",
+  });
 });
 
 app.listen(port, function () {
