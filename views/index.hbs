@@ -12,44 +12,27 @@
     integrity="sha384-b5kHyXgcpbZJO/tY9Ul7kGkf1S0CWuKcCD38l8YkeH8z8QjE0GmW1gYU5S9FOnJ0"
     crossorigin="anonymous"></script>
   <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons" />
+  <link rel="icon" src="wufyshv">
 </head>
 
 <body>
-  <div class="navbar">
-    <nav class="navbar navbar-expand-lg navbar-light bg-light">
-      <div class="collapse navbar-collapse" id="navbarSupportedContent">
-        <li class="nav-item dropdown">
-          <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown"
-            aria-expanded="false">
-            English
-          </a>
-          <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
-            <li class="dropdown-item">English</li>
-            <li class="dropdown-item">Korean</li>
-            <li class="dropdown-item">Japanese</li>
-          </ul>
-        </li>
-        <span class="material-icons"> compare_arrows </span>
-        <li class="nav-item dropdown">
-          <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown"
-            aria-expanded="false">
-            English
-          </a>
-          <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
-            <li class="dropdown-item" value="English">English</li>
-            <li class="dropdown-item" value="Korean">Korean</li>
-            <li class="dropdown-item" value="Japanese">Japanese</li>
-          </ul>
-        </li>
-      </div>
-    </nav>
-  </div>
   <div class="container">
-    <div class="form">
-      <input type="text" name="Text" id="text" />
-      <button type="submit" class="btn btn-outline-danger">Get Result</button>
-    </div>
-    <div class="result"></div>
+    <h1>Convert Hello To</h1>
+    <form method="post" action="en">
+      <button class="btn btn-outline-danger">
+        <i href="/en"> Get in English</i>
+      </button>
+    </form>
+    <form method="post" action="ko">
+      <button class="btn btn-outline-danger">
+        <i href="/en"> Get in Korean</i>
+      </button>
+    </form>
+    <form method="post" action="ja">
+      <button class="btn btn-outline-danger">
+        <i href="/en"> Get in Japanese</i>
+      </button>
+    </form>
   </div>
 </body>
 

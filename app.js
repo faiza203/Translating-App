@@ -12,37 +12,25 @@ i18n.configure({
 });
 
 var hbs = require("hbs");
+const { LOADIPHLPAPI } = require("dns");
 app.set("view engine", "hbs");
 
 app.get("/", function (req, res) {
-  i18n.setLocale("ja");
-  console.log(i18n.__("Hello"));
-  i18n.setLocale("ko");
-  console.log(i18n.__("Hello"));
   res.render("index");
 });
 
-app.get("/en", function (req, res) {
-  i18n.setLocale("ja");
-  console.log(i18n.__("Hello"));
-  i18n.setLocale("ko");
-  console.log(i18n.__("Hello"));
-  res.render("index");
+app.post("/en", function (req, res) {
+  i18n.setLocale("en");
+  res.send(i18n.__("Hello") + " : EN");
 });
 
-app.get("/ja", function (req, res) {
+app.post("/ja", function (req, res) {
   i18n.setLocale("ja");
-  console.log(i18n.__("Hello"));
-  i18n.setLocale("ko");
-  console.log(i18n.__("Hello"));
-  res.render("index");
+  res.send(i18n.__("Hello") + " : Ja");
 });
-app.get("/ko", function (req, res) {
-  i18n.setLocale("ja");
-  console.log(i18n.__("Hello"));
+app.post("/ko", function (req, res) {
   i18n.setLocale("ko");
-  console.log(i18n.__("Hello"));
-  res.render("index");
+  res.send(i18n.__("Hello") + " : Ko");
 });
 
 app.listen(port, function () {
