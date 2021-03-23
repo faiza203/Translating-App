@@ -2,7 +2,5 @@
   "name": "Translating-App",
   "version": "1.0.0",
   "main": "index.js",
-  "repository": "https://github.com/faiza203/Translating-App.git",
-  "author": "faiza203 <fiazfaiza981@gmail.com>",
   "license": "MIT"
 }
